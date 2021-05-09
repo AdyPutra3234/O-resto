@@ -1,5 +1,13 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
+import App from './views/app';
+
+const app = new App({
+  button: document.querySelector('#hamburger'),
+  buttonIcon: document.querySelector('#hamburger i'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('main'),
+});
 
 // Get Content Data
 const restoCards = document.querySelector('.resto__cards');
@@ -29,29 +37,29 @@ fetch('DATA.json')
     restoCards.innerHTML = '<h1 style="font-weight:200;">!!!Oops Something whent wrong</h1>';
   });
 
-const menuIcon = document.getElementById('hamburger');
-const drawer = document.getElementById('drawer');
+// const menuIcon = document.getElementById('hamburger');
+// const drawer = document.getElementById('drawer');
 
-// Change icon when drawer open or close
-const changeIcon = () => {
-  if (drawer.classList.contains('open')) {
-    menuIcon.querySelector('i').innerHTML = 'close'; // change to close icon
-  } else {
-    menuIcon.querySelector('i').innerHTML = 'menu'; // change to hamburger menu icon
-  }
-};
+// // Change icon when drawer open or close
+// const changeIcon = () => {
+//   if (drawer.classList.contains('open')) {
+//     menuIcon.querySelector('i').innerHTML = 'close'; // change to close icon
+//   } else {
+//     menuIcon.querySelector('i').innerHTML = 'menu'; // change to hamburger menu icon
+//   }
+// };
 
-// open drawer by click hamburger icon
-menuIcon.addEventListener('click', (event) => {
-  drawer.classList.toggle('open');
-  changeIcon();
-  event.preventDefault();
-});
+// // open drawer by click hamburger icon
+// menuIcon.addEventListener('click', (event) => {
+//   drawer.classList.toggle('open');
+//   changeIcon();
+//   event.preventDefault();
+// });
 
-// Close Drawer when click on main area
-const main = document.querySelector('main');
+// // Close Drawer when click on main area
+// const main = document.querySelector('main');
 
-main.addEventListener('click', () => {
-  drawer.classList.remove('open');
-  changeIcon();
-});
+// main.addEventListener('click', () => {
+//   drawer.classList.remove('open');
+//   changeIcon();
+// });
