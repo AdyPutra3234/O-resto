@@ -1,0 +1,100 @@
+@media screen and (min-width:768px) {
+    .resto__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header__inner {
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width:1000px) {
+
+    #hamburger {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__inner {
+        justify-content: start;
+        padding: 0;
+    }
+
+    .header__title {
+        flex: none;
+        margin-left: 1em;
+    }
+
+    nav#drawer {
+        visibility: visible;
+        transform: none;
+        position: unset;
+        background-color: unset;
+        padding-right: 1em;
+    }
+
+    .nav a {
+        padding-top: 0.3em;
+        font-size: 1.3em;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .nav__item {
+        padding: 12px;
+    }
+
+    #main-content {
+        padding: 2%;
+    }
+
+    article.detail-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+            'image section1'
+            'section2 section2';
+        gap: 1em;
+        margin: 1em;
+    }
+
+    .img-detail__wrapper {
+        grid-area: image;
+        height: 100%;
+    }
+
+    .img-detail__wrapper img {
+        height: 100%;
+    }
+
+    .detail-section1 {
+        grid-area: section1;
+        height: 100%;
+        padding: 3em 1em;
+    }
+
+    .detail-section2 {
+        grid-area: section2;
+    }
+
+    .detail-section1 button#add-review {
+        width: unset;
+        align-self: unset;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .resto__cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}

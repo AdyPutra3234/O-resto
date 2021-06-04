@@ -1,0 +1,22 @@
+.card__product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em;
+    border-radius: 3em;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+    height: 100px;
+}
+
+.card__product img {
+    width: auto;
+    height: 100%;
+    margin-left: 1em;
+    border-radius: 3em;
+}
+
+.card__product h3 { 
+    flex: auto;
+    text-align: center;
+}

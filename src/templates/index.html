@@ -4,51 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta name="description" content="List and detail of restaurant in Indonesia">
+    <meta name="msapplication-TileColor" content="#da532c">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link 
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+        media="print"
+        onload="this.media='all'">
+    <link 
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Source+Sans+Pro&family=Roboto&display=swap"
+        media="print"
+        onload="this.media='all'">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="/favicon.ico">
     <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
     <title>O'resto</title>
 </head>
 <body>
-    <a href="#main-content" class="skip-to__content">Skip to content</a>
-    <header class="header">
-        <div class="header__inner">
-            <a id="hamburger" href="#">
-                <i class="material-icons"  aria-label="Menu Navigasi">menu</i>
-            </a>
-            <h1 class="header__title">
-                O'resto
-            </h1>
-        </div>
-        <nav id="drawer" class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="index.html">Home</a></li>
-                <li class="nav__item"><a href="#">Favorit</a></li>
-                <li class="nav__item"><a href="https://github.com/AdyPutra3234">About Us</a></li>
-            </ul>
-        </nav>
+    <header>
+        <app-bar></app-bar>
     </header>
-    <div class="hero">
-        <div class="hero__inner">
-            <h1 class="hero__title">Meet and Enjoy</h1>
-            <p class="hero__tagline">Enjoy your days with family and friends in the best restaurant</p>
-        </div>
-    </div>
-    <main id="main-content">
-        <section class="content">
-            <div class="explore">
-                <h1 class="explore__label">Explore Restaurant</h1>
-                <div class="resto__cards"></div>
-            </div>
-        </section>
-    </main>
+    <main class="content"></main>
     <footer>
         <p>Copyright &copy; 2021 - O'resto</p>
     </footer>

@@ -7,15 +7,16 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "lint" : "eslint ./src"
+    "lint": "eslint ./src"
   },
   "keywords": [],
   "author": "Adi <romadona.xtl4@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.10.5",
+    "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.6.0",
     "eslint": "^7.25.0",
@@ -35,9 +36,15 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.0.9",
+    "webpack-pwa-manifest": "^4.3.0",
     "whatwg-fetch": "^3.2.0"
   },
   "dependencies": {
-    "regenerator-runtime": "^0.13.5"
+    "idb": "^6.1.0",
+    "lozad": "^1.16.0",
+    "regenerator-runtime": "^0.13.7",
+    "sanitize-html": "^2.4.0",
+    "serviceworker-webpack-plugin": "^1.0.1",
+    "sweetalert2": "^11.0.11"
   }
 }

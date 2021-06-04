@@ -1,0 +1,31 @@
+.card__review {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em;
+    border-radius: 3em;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 50%);
+    height: max-content;
+    min-height: 150px;
+    padding: 1em;
+}
+
+.card__review img {
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 1em;
+}
+
+.content__review {
+    margin-left: 2em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.content__review p.review {
+    margin: 1em 0;
+}

@@ -1,0 +1,91 @@
+
+
+.form-wrapper {
+    width: 90%;
+    height: 55%;
+    position: fixed;
+    top: 25%;
+    right: 5%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgb(0,0,0,0.5);
+    border-radius: 0.5em;
+  }
+
+  .form-wrapper h3 {
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    height: 90%;
+    justify-content: space-evenly;
+  }
+
+  input , textarea {
+    border-radius: 8px;
+    border: solid 1px grey;
+  }
+
+  input#name {
+    height: 3em;
+    margin: 0.5em 0;
+    padding: 1em;
+  }
+
+  textarea#text-review {
+    height: 50%;
+    margin: 0.5em 0;
+    padding: 1em;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border: solid 1px orange;
+    border-radius: 0.5em;
+  }
+
+  ::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;  
+  }
+
+  .form-button__wrapper {
+    align-self: center;
+    margin: 1em 0;
+  }
+
+  button#submit {
+    min-width: 22px;
+    min-height: 22px;
+    padding: 10px 22px;
+    background-color: #24a0ed;
+    border-radius: 0.5em;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button#cancel {
+    min-width: 22px;
+    min-height: 22px;
+    padding: 10px 22px;
+    background-color: white;
+    border-radius: 0.5em;
+    color: red;
+    border: 1px solid red;
+    margin-left: 1em;
+    cursor: pointer;
+  }
+
+  button#submit:hover {
+    background-color: #61baf1;
+  }
+
+  button#cancel:hover {
+    background-color: red;
+    color: white;
+  }
