@@ -39,7 +39,7 @@ class FormAddReview extends HTMLElement {
                             <form>
                                 <label for="name">Name</label>
                                 <input type="text" placeholder="input your name" id="name" tabindex="7"/>
-                                <label for="review">Review</label>
+                                <label for="text-review">Review</label>
                                 <textarea id="text-review" rows="4" cols="5" placeholder="Input your felling's" tabindex="8"></textarea>                                <div class="form-button__wrapper">
                                   <Button id="submit" tabindex="9">Submit</button>
                                   <Button id="cancel" tabindex="10">Cancel</button>
