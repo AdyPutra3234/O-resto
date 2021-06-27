@@ -26,8 +26,7 @@ const formSubmitHandler = async (event) => {
       if (!response || response.error) throw response.message;
       else {
         removeForm();
-        sweetAlert.successMessage('Thank\'s for your review');
-        window.location.reload();
+        sweetAlert.successMessage('Thank\'s for your review', () => window.location.reload());
       }
     }
   } catch (error) {
