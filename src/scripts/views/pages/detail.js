@@ -7,7 +7,8 @@ import {
 } from '../../utils/rendering-component';
 
 import RestaurantsDataSource from '../../data/restaurants-dataSource';
-import LikeButtonInititator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
+import FavoriteRestaurantIdb from '../../data/favorite-idb';
 import UrlParser from '../../routes/url-parser';
 import '../components/detail-item';
 
@@ -56,9 +57,10 @@ const Detail = {
         clickEvent: detailMenuClickEventHandler,
       });
 
-      LikeButtonInititator.init({
+      LikeButtonPresenter.init({
         container: document.querySelector('#likeButtonContainer'),
         restaurant,
+        favoriteRestaurant: FavoriteRestaurantIdb,
       });
     } else {
       document.querySelector('loader-animation').remove();
