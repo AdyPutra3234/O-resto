@@ -52,4 +52,4 @@ class FormAddReview extends HTMLElement {
   }
 }
 
-customElements.define('form-addreview', FormAddReview);
+if (!customElements.get('form-addreview')) customElements.define('form-addreview', FormAddReview);

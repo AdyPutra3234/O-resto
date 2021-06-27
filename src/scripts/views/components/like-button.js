@@ -16,8 +16,8 @@ class LikeButton extends HTMLElement {
                         <i class="material-icons" aria-hidden="true">favorite_border</i>
                     </button>`;
 
-    this.querySelector('.like').addEventListener('click', this._like);
+    this.querySelector('#likeButton').addEventListener('click', this._like);
   }
 }
 
-customElements.define('like-button', LikeButton);
+if (!customElements.get('like-button')) customElements.define('like-button', LikeButton);

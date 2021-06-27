@@ -12,4 +12,4 @@ class UiFailedResponse extends HTMLElement {
   }
 }
 
-customElements.define('ui-failed', UiFailedResponse);
+if (!customElements.get('ui-failed')) customElements.define('ui-failed', UiFailedResponse);

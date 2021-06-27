@@ -41,4 +41,4 @@ class LoaderAnimation extends HTMLElement {
   }
 }
 
-customElements.define('loader-animation', LoaderAnimation);
+if (!customElements.get('loader-animation')) customElements.define('loader-animation', LoaderAnimation);

@@ -1,5 +1,5 @@
-import CONFIG from '../../globals/config';
 import '../../../styles/component/restaurant-item.css';
+import CONFIG from '../../globals/config';
 
 class RestaurantItem extends HTMLElement {
   set dataRestaurant(data) {
@@ -24,4 +24,4 @@ class RestaurantItem extends HTMLElement {
   }
 }
 
-customElements.define('restaurant-item', RestaurantItem);
+if (!customElements.get('restaurant-item')) customElements.define('restaurant-item', RestaurantItem);

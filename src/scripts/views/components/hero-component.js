@@ -16,4 +16,4 @@ class HeroComp extends HTMLElement {
   }
 }
 
-customElements.define('hero-comp', HeroComp);
+if (!customElements.get('hero-comp')) customElements.define('hero-comp', HeroComp);

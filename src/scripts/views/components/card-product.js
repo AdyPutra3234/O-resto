@@ -21,4 +21,4 @@ class CardProduct extends HTMLElement {
   }
 }
 
-customElements.define('card-product', CardProduct);
+if (!customElements.get('card-product')) customElements.define('card-product', CardProduct);

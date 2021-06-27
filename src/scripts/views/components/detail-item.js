@@ -63,4 +63,4 @@ class DetailItem extends HTMLElement {
   }
 }
 
-customElements.define('detail-item', DetailItem);
+if (!customElements.get('detail-item')) customElements.define('detail-item', DetailItem);

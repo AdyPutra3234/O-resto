@@ -12,12 +12,12 @@ class UnlikeButton extends HTMLElement {
 
   render() {
     this.innerHTML = `
-                      <button aria-label="remove from favorites" id="likeButton" class="like">
+                      <button aria-label="remove from favorites" id="unlikeButton" class="favorite__widget">
                           <i class="material-icons" aria-hidden="true">favorite</i>
                       </button>`;
 
-    this.querySelector('.like').addEventListener('click', this._unlike);
+    this.querySelector('#unlikeButton').addEventListener('click', this._unlike);
   }
 }
 
-customElements.define('unlike-button', UnlikeButton);
+if (!customElements.get('unlike-button')) customElements.define('unlike-button', UnlikeButton);
