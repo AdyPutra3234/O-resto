@@ -11,12 +11,13 @@ exports.config = {
     Puppeteer: {
       url: 'http://localhost:8080',
       show: true,
-      windowSize: '1200x900',
+      windowSize: '1367x960',
     },
   },
   include: {
     I: './steps_file.js',
   },
+  waitForAction: 1000,
   bootstrap: null,
   mocha: {},
   name: 'O-resto',
