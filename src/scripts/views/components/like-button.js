@@ -12,7 +12,7 @@ class LikeButton extends HTMLElement {
 
   render() {
     this.innerHTML = `
-                    <button aria-label="add to favorites" id="likeButton" class="like">
+                    <button aria-label="add to favorites" id="likeButton" class="favorite__widget">
                         <i class="material-icons" aria-hidden="true">favorite_border</i>
                     </button>`;
 
