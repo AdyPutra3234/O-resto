@@ -1,4 +1,5 @@
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2/dist/sweetalert2.min';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 const sweetAlert = {
   successMessage(text, callbck) {
