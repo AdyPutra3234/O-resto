@@ -4,12 +4,11 @@
   "description": "restaurant app , list of restaurants",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "start-dev": "node sharp.js && webpack-dev-server --config webpack.dev.js",
+    "build": "node sharp.js && webpack --config webpack.prod.js",
     "test": "karma start",
     "lint": "eslint ./src",
-    "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js"
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "Adi <romadona.xtl4@gmail.com>",
