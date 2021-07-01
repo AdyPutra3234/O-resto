@@ -2,19 +2,16 @@ const assert = require('assert');
 
 Feature('Liking Restaurants');
 
-Before(({ I }) => {
-  I.amOnPage('/#/favorites');
-});
-
-Scenario('liking on restaurant then unlike it', async ({ I }) => {
+Scenario('liking on restaurant', async ({ I }) => {
   I.amOnPage('/#/favorites');
   I.see('!!! Your favorites is empty', '#idbEmptyUI');
 
   I.amOnPage('/');
 
-  I.waitForVisible('.resto__name a');
+  I.waitForResponse((response) => response.url() === 'https://restaurant-api.dicoding.dev/list' && response.status() === 200, 3);
+
+  I.seeElement('restaurant-item');
   I.seeElement('.resto__name a');
-  //   pause();
 
   const firstRestaurant = locate('.resto__name a').first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);

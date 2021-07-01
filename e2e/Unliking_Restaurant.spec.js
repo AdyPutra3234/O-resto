@@ -6,7 +6,8 @@ Scenario('Unliking on restaurant', async ({ I }) => {
 
   I.amOnPage('/');
 
-  I.waitForVisible('.resto__name a');
+  I.waitForResponse((response) => response.url() === 'https://restaurant-api.dicoding.dev/list' && response.status() === 200, 3);
+  I.seeElement('restaurant-item');
   I.seeElement('.resto__name a');
   const firstRestaurant = locate('.resto__name a').first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
