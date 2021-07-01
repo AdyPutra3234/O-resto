@@ -1,5 +1,6 @@
 import { showRestaurantItem, showUiFailedResponse } from '../../utils/rendering-component';
 import RestaurantsDataSource from '../../data/restaurants-dataSource';
+import '../components/sekeleton-loader';
 import '../components/restaurant-item';
 
 const Home = {
@@ -10,22 +11,28 @@ const Home = {
             <section id="main-content">
               <div class="explore">
                 <h1 class="explore__label">Explore Restaurant</h1>
-                <loader-animation></loader-animation>
-                <div class="resto__cards"></div>
+                <div class="resto__cards">
+                  <sekeleton-loader></sekeleton-loader>
+                  <sekeleton-loader></sekeleton-loader>
+                  <sekeleton-loader></sekeleton-loader>
+                  <sekeleton-loader></sekeleton-loader>
+                  <sekeleton-loader></sekeleton-loader>
+                  <sekeleton-loader></sekeleton-loader>
+                </div>
               </div>
             </section>`;
   },
 
   async afterRender() {
+    const restaurantsContainer = document.querySelector('.resto__cards');
     const response = await RestaurantsDataSource.listOfRestaurants();
 
     if (response && !response.error) {
       const { restaurants } = response;
-      document.querySelector('loader-animation').remove();
-      const restaurantsContainer = document.querySelector('.resto__cards');
+      restaurantsContainer.innerHTML = '';
       showRestaurantItem(restaurantsContainer, restaurants);
     } else {
-      document.querySelector('loader-animation').remove();
+      restaurantsContainer.innerHTML = '';
       showUiFailedResponse(document.querySelector('.explore'));
     }
   },
