@@ -77,7 +77,7 @@ img.lozad {
 }
 
 img.loaded {
-    opacity: 100%;
+    opacity: unset;
 }
 
 /* Resto Cards */
