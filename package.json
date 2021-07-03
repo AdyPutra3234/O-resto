@@ -6,6 +6,7 @@
   "scripts": {
     "start-dev": "node sharp.js && webpack-dev-server --config webpack.dev.js",
     "build": "node sharp.js && webpack --config webpack.prod.js",
+    "deploy": "node sharp.js && webpack --config webpack.deploy.js",
     "test": "karma start",
     "lint": "eslint ./src",
     "e2e": "codeceptjs run --steps"
