@@ -13,25 +13,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
   },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ],
-      },
-    ],
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
+      scriptLoading: 'defer',
+      inject: 'body',
     }),
 
     new CopyWebpackPlugin({
@@ -93,8 +80,8 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: 'all',
-      minSize: 10000,
-      maxSize: 50000,
+      minSize: 20000,
+      maxSize: 70000,
       minChunks: 1,
       maxAsyncRequests: 30,
       maxInitialRequests: 30,
@@ -112,5 +99,6 @@ module.exports = {
         },
       },
     },
+    usedExports: true,
   },
 };
