@@ -1,6 +1,6 @@
 # O-resto
 Dicoding submission ( Front-End Web Dev Expert )
-list of restaurants
+list of restaurants web app. [Live Demo](https://oresto.netlify.app/)
 
 ## Features
 * [PWA](https://web.dev/progressive-web-apps/)
