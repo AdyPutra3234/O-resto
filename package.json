@@ -38,6 +38,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^4.0.2",
     "mini-css-extract-plugin": "^1.5.0",
+    "preload-webpack-plugin": "^3.0.0-beta.3",
     "puppeteer": "^10.0.0",
     "sharp": "^0.28.3",
     "style-loader": "^1.2.1",

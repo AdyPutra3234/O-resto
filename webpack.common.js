@@ -1,5 +1,6 @@
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -19,6 +20,11 @@ module.exports = {
       filename: 'index.html',
       scriptLoading: 'defer',
       inject: 'body',
+    }),
+
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      as: 'style',
     }),
 
     new CopyWebpackPlugin({
