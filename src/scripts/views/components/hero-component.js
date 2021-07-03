@@ -12,7 +12,7 @@ class HeroComp extends HTMLElement {
                             <source media="(max-width: 600px)" srcset="./images/hero-image-small.jpg">
                             <img 
                                 src="./images/hero-image-large.jpg" 
-                                alt="kingdom heart 3 poster"></img>
+                                alt="meet and enjoy"></img>
                         </picture>
                         <div class="hero__inner">
                             <h1 class="hero__title">Meet and Enjoy</h1>
