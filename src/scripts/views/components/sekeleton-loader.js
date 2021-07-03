@@ -9,7 +9,7 @@ class SekeletonLoader extends HTMLElement {
   }
 
   render() {
-    this.shadowDom.innerHTML = `
+    this.shadowDOM.innerHTML = `
         <style>
             .sekeleton__card {
                 position: relative;
